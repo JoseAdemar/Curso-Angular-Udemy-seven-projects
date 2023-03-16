@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { CalculadoraService } from '../services/calculadora.service';
 import { CalculadoraComponent } from './calculadora.component';
 
 describe('CalculadoraComponent', () => {
@@ -8,7 +8,8 @@ describe('CalculadoraComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CalculadoraComponent ]
+      declarations: [ CalculadoraComponent ],
+      providers:[CalculadoraService]
     })
     .compileComponents();
 
@@ -20,4 +21,5 @@ describe('CalculadoraComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
